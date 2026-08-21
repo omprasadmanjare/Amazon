@@ -1,1 +1,416 @@
-hello sanket
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eaeded;
+        }
+
+        /* HEADER */
+        header {
+            background: #131921;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ff9900;
+        }
+
+        .search {
+            flex: 1;
+            display: flex;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .search button {
+            padding: 12px 20px;
+            border: none;
+            background: #febd69;
+            cursor: pointer;
+        }
+
+        .cart {
+            font-size: 18px;
+        }
+
+        /* NAV */
+        nav {
+            background: #232f3e;
+            padding: 12px 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+        }
+
+        /* PRODUCT */
+        .product-container {
+            background: white;
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 30px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .product-image {
+            width: 45%;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 450px;
+            height: 450px;
+            object-fit: contain;
+        }
+
+        .product-details {
+            width: 55%;
+        }
+
+        .product-details h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: #ff9900;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 30px;
+            color: #b12704;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .offer {
+            color: #007600;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .quantity {
+            margin: 15px 0;
+        }
+
+        .quantity select {
+            padding: 8px;
+        }
+
+        .buttons button {
+            width: 200px;
+            padding: 14px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cart-btn {
+            background: #ffd814;
+        }
+
+        .buy-btn {
+            background: #ff9900;
+        }
+
+        .buttons button:hover {
+            opacity: 0.85;
+        }
+
+        /* FEATURES */
+        .features {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+        }
+
+        .features h2 {
+            margin-bottom: 15px;
+        }
+
+        .features li {
+            margin: 10px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 30px;
+            background: #131921;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                flex-wrap: wrap;
+            }
+
+            .search {
+                order: 3;
+                flex-basis: 100%;
+            }
+
+            .product-container {
+                flex-direction: column;
+            }
+
+            .product-image,
+            .product-details {
+                width: 100%;
+            }
+
+            .product-image img {
+                height: 300px;
+            }
+
+            .buttons button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            Shop<span>Kart</span>
+        </div>
+
+        <div class="search">
+            <input type="text"
+                   placeholder="Search products">
+
+            <button>🔍</button>
+        </div>
+
+        <div class="cart">
+            🛒 Cart
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Deals</a>
+        <a href="#">Orders</a>
+
+    </nav>
+
+
+    <!-- PRODUCT SECTION -->
+    <div class="product-container">
+
+        <!-- PRODUCT IMAGE -->
+        <div class="product-image">
+
+            <img
+                src="https://via.placeholder.com/500"
+                alt="Home Product">
+
+        </div>
+
+
+        <!-- PRODUCT DETAILS -->
+        <div class="product-details">
+
+            <h1>
+                Premium Home Kitchen Product
+            </h1>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+                <span style="color:#555;">
+                    4.5 (1,250 ratings)
+                </span>
+            </div>
+
+            <hr>
+
+            <p class="price">
+                ₹999
+            </p>
+
+            <p class="offer">
+                🔥 20% OFF
+            </p>
+
+            <p class="description">
+                Premium quality home product designed
+                for everyday use. Durable, stylish and
+                easy to use. Perfect for your kitchen
+                and home.
+            </p>
+
+            <p>
+                🚚 <b>FREE Delivery</b>
+            </p>
+
+            <p style="margin-top:10px;">
+                ✅ In Stock
+            </p>
+
+
+            <!-- QUANTITY -->
+            <div class="quantity">
+
+                <label>
+                    <b>Quantity:</b>
+                </label>
+
+                <select id="quantity">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <button
+                    class="cart-btn"
+                    onclick="addToCart()">
+
+                    🛒 Add to Cart
+
+                </button>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="buyNow()">
+
+                    ⚡ Buy Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FEATURES -->
+    <div class="features">
+
+        <h2>Product Features</h2>
+
+        <ul>
+
+            <li>✔ Premium Quality Material</li>
+
+            <li>✔ Easy to Use</li>
+
+            <li>✔ Long Lasting Product</li>
+
+            <li>✔ Perfect for Home & Kitchen</li>
+
+            <li>✔ Fast Delivery Available</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 ShopKart | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function addToCart() {
+
+            let quantity =
+                document.getElementById("quantity").value;
+
+            alert(
+                quantity +
+                " product(s) added to your cart 🛒"
+            );
+
+        }
+
+
+        function buyNow() {
+
+            let quantity =
+                document.getElementById("quantity").value;
+
+            alert(
+                "Proceeding to checkout for " +
+                quantity +
+                " product(s) ⚡"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
